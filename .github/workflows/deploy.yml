@@ -1,0 +1,50 @@
+name: Build and Deploy to Google Cloud Storage
+
+on:
+  push:
+    branches:
+    - main
+    
+env:
+  GCS_BUCKET: ${{ secrets.GCS_BUCKET }}
+  
+
+jobs:
+  setup-build-deploy:
+    name: Setup, Build, and Deploy
+    runs-on: ubuntu-latest
+    # defaults:
+    #   run:
+    #     working-directory: ./interface
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    - id: 'auth'
+      uses: 'google-github-actions/auth@v0'
+      with:
+        credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+
+    - name: Setup - gcloud / gsutil
+      uses: 'google-github-actions/setup-gcloud@v0'
+      with:
+        project_id: ${{ secrets.GCS_PROJECT }}
+    
+    - name: Set up Mkdocs
+      uses: actions/setup-python@v4
+      with:
+          python-version: 3.x
+
+    - name: Cache
+      uses: 'actions/cache@v2'
+      with:
+        path: .cache
+        key: ${{ github.ref }}
+
+    - run: pip install mkdocs-material 
+    - run: mkdocs build
+
+    - name: Deploy
+      run: |-
+        gsutil -m rsync -R site gs://$GCS_BUCKET
