@@ -1,4 +1,4 @@
-# Blockchains and Accounts
+# Chains and Tokens
 
 ## What are Blockchain networks
 
@@ -13,7 +13,7 @@ Every _node_ on the blockchain has a copy of the whole database (the blockchai
 
 ## Supported networks
 
-Currently, ChainPact is in pre-alpha phase and has been deployed to major EVM-based testnets such as Goerli, Avalanche Fuji and Polygon Mumbai. In future we wish to integrate with other EVM based chains as well as non-EVM blockchains.
+Currently, ChainPact is in alpha phase and has been deployed to major EVM-based testnets such as BNB Testnet, Avalanche Fuji and Polygon Mumbai. In future we wish to integrate with other EVM based chains as well as non-EVM blockchains.
 
 ## Supported Currencies
 

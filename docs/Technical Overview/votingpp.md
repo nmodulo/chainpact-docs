@@ -1,40 +1,5 @@
 # Voting mechanism
 
-## Other Existing Voting Patterns
-
-Blockchain-based voting enables a more secure and decentralized voting setup. It is a common use case for Decentralized autonomous organizations (DAOs) which have been getting increasingly popular in the past few years. We explore the various mechanisms of voting participation, compare the voting strategy in proposal pact with that of existing standards.  
-
-### Quorum voting  
-
-It requires a certain threshold of voters in order for a proposal to pass. This could be in the number of voters or in terms of voting power. For instance, a 60% quorum of voters would mean at least 60% of all eligible voters must vote in order for it to be considered.Some (like Compound governance), however, use a voting power threshold. A 20% threshold means if 20% of voting power has voted positively, the proposal passes.
-
-
-This is a straightforward and safe system as long a balanced quorum requirement is selected. A high quorum, which means a lot of users have to vote, may make proposals difficult to pass and hence slow things down. And a low threshold makes the system easy to attack by passing nefarious proposals quickly. Sometimes, though, voting could become a game of chasing “the whales” (accounts with high token balances)
-
-
-Other challenges include difficulty in passing smaller less popular proposals (leading to a governance lock), tactical voting of alternatives to prevent or let a certain proposal pass instead of choosing one’s actual preference, the financial aspect of token price (since you need more tokens for more voting power)
-
-
-### Holographic Consensus
-
-The voters first stake tokens on the outcome of the vote (for or against) and then the result is arrived at using relative majority, without needing a quorum. This can incentivize voting on proposals, and reduce the risk of attacks. However, this too may suffer from tactical voting, and lead to forming social communities or groups before even a proposal is made or voting is started.
-
-
-Further, this system is harder to understand for new people, leading to lessening of participation, slightly worse user experience, friction in processes, and cost in terms of educating users.
-
-
-### Conviction voting
-
-Individuals stake tokens on a certain proposal with a certain vote. Over time this preference gains more weight. When a vote is changed, it means sacrificing the accumulated weight on that vote. So, last minute vote hijacking by whales becomes difficult. This a representation of people’s long term faith in an idea. 
-
-
-Although this mechanism can serve use cases like a long-term fundraisers, doing radical changes like addressing a bug, won’t be a suited use-case.
-  
-
-### Permissioned Relative majority
-
-Relative majority means one vote is simply greater than the other. On a DAO, this could be easily attacked by passing a proposal silently which could lead to unwanted consequences for other members. Adding a layer of permissions, e.g. who can create a proposal, who can vote etc. and adding time-based protections can mediate the risks.
-
 ## Voting Mechanism in Proposal Pact
 
 The proposal pact is meant for a more open audience than a fixed DAO pool of participants. Rather than executing DAO smart contract code, it is only meant for an opinion and fund collection tool.
@@ -81,3 +46,39 @@ However, for open participation, the creator must specify a certain non-zero con
 ### Voters can’t be changed dynamically
 
 While the voting is active no change to the core data of the pact can be made. This includes the set of permissioned voters in case of a fixed participant proposal pact.
+
+## Other Voting Patterns outside of ChainPact (for ref)
+
+Blockchain-based voting enables a more secure and decentralized voting setup. It is a common use case for Decentralized autonomous organizations (DAOs) which have been getting increasingly popular in the past few years. We explore the various mechanisms of voting participation, compare the voting strategy in proposal pact with that of existing standards.  
+
+### Quorum voting  
+
+It requires a certain threshold of voters in order for a proposal to pass. This could be in the number of voters or in terms of voting power. For instance, a 60% quorum of voters would mean at least 60% of all eligible voters must vote in order for it to be considered.Some (like Compound governance), however, use a voting power threshold. A 20% threshold means if 20% of voting power has voted positively, the proposal passes.
+
+
+This is a straightforward and safe system as long a balanced quorum requirement is selected. A high quorum, which means a lot of users have to vote, may make proposals difficult to pass and hence slow things down. And a low threshold makes the system easy to attack by passing nefarious proposals quickly. Sometimes, though, voting could become a game of chasing “the whales” (accounts with high token balances)
+
+
+Other challenges include difficulty in passing smaller less popular proposals (leading to a governance lock), tactical voting of alternatives to prevent or let a certain proposal pass instead of choosing one’s actual preference, the financial aspect of token price (since you need more tokens for more voting power)
+
+
+### Holographic Consensus
+
+The voters first stake tokens on the outcome of the vote (for or against) and then the result is arrived at using relative majority, without needing a quorum. This can incentivize voting on proposals, and reduce the risk of attacks. However, this too may suffer from tactical voting, and lead to forming social communities or groups before even a proposal is made or voting is started.
+
+
+Further, this system is harder to understand for new people, leading to lessening of participation, slightly worse user experience, friction in processes, and cost in terms of educating users.
+
+
+### Conviction voting
+
+Individuals stake tokens on a certain proposal with a certain vote. Over time this preference gains more weight. When a vote is changed, it means sacrificing the accumulated weight on that vote. So, last minute vote hijacking by whales becomes difficult. This a representation of people’s long term faith in an idea. 
+
+
+Although this mechanism can serve use cases like a long-term fundraisers, doing radical changes like addressing a bug, won’t be a suited use-case.
+  
+
+### Permissioned Relative majority
+
+Relative majority means one vote is simply greater than the other. On a DAO, this could be easily attacked by passing a proposal silently which could lead to unwanted consequences for other members. Adding a layer of permissions, e.g. who can create a proposal, who can vote etc. and adding time-based protections can mediate the risks.
+
